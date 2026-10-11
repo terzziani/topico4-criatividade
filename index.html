@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0D1317">
+  <meta name="description" content="Cinco descobertas científicas sobre o desenvolvimento da criatividade na adolescência.">
+  <title>O Desenvolvimento da Criatividade na Adolescência</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-title: 'Lexend', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --bg: #0D1317;
+      --panel: #1D2D35;
+      --pink: #FF2A6D;
+      --cyan: #05D9E8;
+      --blue: #005678;
+      --ice: #D1F7FF;
+      --muted: #a8c0c8;
+      --line: rgba(209,247,255,.16);
+      --radius: 20px;
+      color-scheme: dark;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0;
+      color: var(--ice);
+      background-color: var(--bg);
+      background-image: linear-gradient(180deg, rgba(13,19,23,.91), rgba(13,19,23,.97)), url('https://raw.githubusercontent.com/GlauberLASantiago/gl-cores-fontes-e-fundos/main/abstrato/z_svg_80_arte_concreta_bauhaus_formas_puras.svg');
+      background-position: center top, center top;
+      background-size: cover, 760px auto;
+      background-attachment: fixed;
+      font: 400 16px/1.75 var(--font-body);
+    }
+    a { color: var(--cyan); text-underline-offset: 4px; }
+    a:hover { color: var(--ice); }
+    img, video { max-width: 100%; }
+    h1, h2, h3, h4, h5, h6 { font-family: var(--font-title); line-height: 1.18; letter-spacing: -.035em; }
+    p, li, blockquote { font-family: var(--font-body); }
+    p { color: #d2e4e9; }
+    .skip-link { position: absolute; top: -50px; left: 1rem; background: var(--cyan); color: var(--bg); padding: .7rem 1rem; z-index: 99; }
+    .skip-link:focus { top: 1rem; }
+    .topbar { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(18px); background: rgba(13,19,23,.88); border-bottom: 1px solid var(--line); }
+    .nav { max-width: 1160px; margin: auto; padding: .8rem 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand { display: flex; align-items: center; gap: .7rem; color: var(--ice); text-decoration: none; font: 700 .9rem var(--font-title); letter-spacing: .08em; text-transform: uppercase; }
+    .brand-mark { width: 14px; height: 14px; background: var(--pink); box-shadow: 7px 7px 0 var(--cyan); transform: rotate(10deg); margin-right: .4rem; }
+    .nav-links { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-links a { font-size: .82rem; color: var(--muted); text-decoration: none; }
+    .nav-links a:hover { color: var(--cyan); }
+    main { max-width: 1000px; margin: auto; padding: 2rem 1.25rem 5rem; }
+    .hero { min-height: 490px; display: grid; align-content: center; padding: clamp(2rem, 7vw, 5rem) 0 4rem; }
+    .eyebrow { display: inline-flex; align-items: center; gap: .6rem; color: var(--cyan); font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .eyebrow::before { content: ''; display: inline-block; width: 28px; height: 2px; background: var(--pink); }
+    h1 { max-width: 900px; margin: 1.1rem 0; font-size: clamp(2.5rem, 7vw, 5.4rem); font-weight: 800; }
+    h1 span { color: var(--pink); }
+    .hero-lead { max-width: 760px; font-size: clamp(1.04rem, 2vw, 1.25rem); color: var(--ice); }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.4rem; }
+    .pill { border: 1px solid var(--line); background: rgba(29,45,53,.72); padding: .35rem .7rem; border-radius: 999px; color: var(--muted); font-size: .76rem; }
+    .section { margin-top: 3rem; }
+    .section-head { margin-bottom: 1.25rem; }
+    .section-head h2 { font-size: clamp(1.7rem, 4vw, 2.65rem); margin: .5rem 0; }
+    .section-head p { max-width: 760px; margin-bottom: 0; }
+    .panel { background: rgba(29,45,53,.86); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.2rem, 3vw, 2rem); box-shadow: 0 18px 50px rgba(0,0,0,.14); }
+    .intro-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 1rem; align-items: stretch; }
+    .stat-card { background: var(--blue); border-radius: var(--radius); padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 220px; }
+    .stat { color: var(--cyan); font: 800 clamp(2.8rem, 6vw, 4.4rem)/1 var(--font-title); letter-spacing: -.06em; }
+    .stat-card p { color: white; margin-bottom: 0; }
+    .callout { margin: 1.4rem 0; border-left: 4px solid var(--pink); background: rgba(255,42,109,.08); padding: 1rem 1.2rem; border-radius: 0 12px 12px 0; color: var(--ice); }
+    .finding { margin-top: 1.1rem; overflow: hidden; }
+    .finding-head { display: flex; gap: 1rem; align-items: flex-start; }
+    .number { flex: 0 0 52px; height: 52px; display: grid; place-items: center; border-radius: 15px; background: var(--pink); color: white; font: 800 1.4rem var(--font-title); }
+    .finding h3 { margin: .25rem 0 .6rem; font-size: clamp(1.25rem, 3vw, 1.75rem); }
+    .finding p { margin: .65rem 0; }
+    .finding ul { padding-left: 1.25rem; color: #d2e4e9; }
+    li::marker { color: var(--cyan); }
+    .table-wrap { overflow-x: auto; margin: 1.3rem 0; border: 1px solid var(--line); border-radius: 14px; }
+    table { width: 100%; border-collapse: collapse; min-width: 420px; text-align: left; }
+    th, td { padding: .85rem 1rem; border-bottom: 1px solid var(--line); }
+    th { color: var(--cyan); font-size: .83rem; background: rgba(0,86,120,.28); }
+    td { color: #d2e4e9; }
+    tr:last-child td { border-bottom: 0; }
+    td:last-child, th:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+    .media-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .media-card { display: flex; flex-direction: column; gap: .8rem; min-width: 0; }
+    .media-card h3 { font-size: 1.12rem; margin: 0; }
+    .media-card p { font-size: .9rem; margin: 0; }
+    .media-card img { display: block; width: 100%; border-radius: 12px; border: 1px solid var(--line); }
+    audio, video { width: 100%; border-radius: 12px; }
+    .media-icon { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: rgba(5,217,232,.12); color: var(--cyan); font-size: 1.3rem; }
+    .conclusion { background: linear-gradient(135deg, rgba(0,86,120,.7), rgba(29,45,53,.92)); border: 1px solid rgba(5,217,232,.3); }
+    .reflection { color: var(--ice); font: 600 clamp(1.2rem, 3vw, 1.7rem)/1.5 var(--font-title); }
+    footer { border-top: 1px solid var(--line); padding: 2rem 1.25rem; text-align: center; color: var(--muted); font-size: .85rem; background: rgba(13,19,23,.8); }
+    footer strong { color: var(--ice); }
+    .back-top { display: inline-block; margin-top: 1rem; font-size: .8rem; }
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      .nav-links { justify-content: flex-start; gap: .75rem; }
+      .hero { min-height: 0; padding: 3.5rem 0 2.5rem; }
+      .intro-grid, .media-grid { grid-template-columns: 1fr; }
+      .stat-card { min-height: 160px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="brand" href="#topo"><span class="brand-mark" aria-hidden="true"></span> Ciência & Criatividade</a>
+      <div class="nav-links">
+        <a href="#estudo">O estudo</a>
+        <a href="#descobertas">5 descobertas</a>
+        <a href="#midias">Mídias</a>
+        <a href="#conclusao">Conclusão</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="topo">
+      <div class="eyebrow">Desenvolvimento humano · Educação</div>
+      <h1>O Desenvolvimento da Criatividade na Adolescência: <span>5 Descobertas Científicas Surpreendentes</span></h1>
+      <p class="hero-lead">O que realmente estimula o pensamento criativo? Uma investigação longitudinal mostra como hábitos individuais, amizades, família e práticas de ensino se relacionam com a confiança dos jovens para pensar de maneira original.</p>
+      <div class="hero-meta">
+        <span class="pill">Pesquisa longitudinal · 5 anos</span>
+        <span class="pill">5º ao 9º ano</span>
+        <span class="pill">KELS 2013 · Coreia do Sul</span>
+      </div>
+    </section>
+
+    <section class="section" id="estudo">
+      <div class="section-head">
+        <div class="eyebrow">Contexto da pesquisa</div>
+        <h2>A criatividade não surge no vácuo</h2>
+      </div>
+      <div class="intro-grid">
+        <div class="panel">
+          <p>A criatividade costuma ser tratada como um dom inato, reservado a poucas pessoas. A pesquisa apresentada aqui propõe uma visão mais dinâmica: a atitude criativa é moldada por hábitos individuais e por sistemas sociais e educacionais.</p>
+          <p>O foco não é apenas o desempenho em testes padronizados de criatividade, mas o <strong>autoconceito criativo</strong> e a disposição do estudante para resolver problemas de forma original — sua crença de que pode gerar ideias, conectar conceitos e enfrentar desafios por novos ângulos.</p>
+          <p>O estudo acompanhou estudantes ao longo de cinco anos usando dados do <em>Korean Education Longitudinal Study</em> (KELS 2013) e um modelo de crescimento em dois níveis para analisar fatores individuais, relações com colegas, estilos parentais e métodos de ensino.</p>
+        </div>
+        <aside class="stat-card" aria-label="Amostra da pesquisa">
+          <div>
+            <div class="stat">7.324</div>
+            <p>estudantes acompanhados do 5º ao 9º ano</p>
+          </div>
+          <p><strong>Uma trajetória ao longo do tempo</strong><br>O estudo examinou como a confiança criativa evolui e quais fatores se associam a essa mudança.</p>
+        </aside>
+      </div>
+      <div class="callout">Importante: os resultados descritos são associações estatísticas observadas no estudo. Eles não demonstram, por si só, que um fator cause diretamente o aumento ou a redução da criatividade.</div>
+    </section>
+
+    <section class="section" id="descobertas">
+      <div class="section-head">
+        <div class="eyebrow">O que os dados sugerem</div>
+        <h2>5 descobertas sobre a criatividade na adolescência</h2>
+        <p>Da oscilação ao longo dos anos escolares à influência do ambiente social, os resultados desafiam explicações simplistas sobre talento e originalidade.</p>
+      </div>
+
+      <article class="panel finding">
+        <div class="finding-head"><div class="number">01</div><div><h3>A confiança criativa oscila — e pode cair na adolescência</h3><p>A trajetória descrita não é linear. A atitude criativa cresce no final do ensino fundamental I, chega ao ponto máximo no 6º ano e depois recua, alcançando seu nível mais baixo no 8º ano antes de apresentar uma recuperação discreta no 9º.</p></div></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Ano escolar (onda)</th><th>Média reportada</th></tr></thead>
+            <tbody>
+              <tr><td>6º ano (Y2) · pico</td><td>3,633</td></tr>
+              <tr><td>8º ano (Y4) · ponto mais baixo</td><td>3,544</td></tr>
+              <tr><td>9º ano (Y5) · leve recuperação</td><td>3,591</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Uma possível interpretação apresentada no texto é que, durante a adolescência, a necessidade de aceitação e o medo de rejeição podem tornar os jovens mais cautelosos ao expor ideias divergentes. O chamado “hiato criativo do 8º ano” deve ser entendido como uma descrição da trajetória observada nesta pesquisa, não como uma regra universal para todos os adolescentes.</p>
+      </article>
+
+      <article class="panel finding">
+        <div class="finding-head"><div class="number">02</div><div><h3>O maior preditor destacado é a autorregulação, não a nota</h3><p>A variável individual mais fortemente associada à atitude criativa foi a autorregulação e a autogestão do estudante (γ = 0,208; β = 0,201). No modelo descrito, seu peso foi superior ao do desempenho acadêmico (β = 0,090).</p></div></div>
+        <p>Na prática, a autorregulação aparece em comportamentos cotidianos:</p>
+        <ul>
+          <li>Planejar as tarefas antes de executá-las;</li>
+          <li>Evitar procrastinar os deveres do dia;</li>
+          <li>Usar agenda ou caderno para organizar compromissos;</li>
+          <li>Organizar a própria mesa de estudos;</li>
+          <li>Preparar e guardar o material escolar com autonomia.</li>
+        </ul>
+        <p>A interpretação proposta é que organizar tarefas e tempo pode ajudar o estudante a reservar recursos mentais para explorar soluções originais, em vez de gastar toda a atenção tentando administrar a desorganização.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Fator avaliado no modelo final</th><th>Impacto relativo (β)</th></tr></thead>
+            <tbody>
+              <tr><td>Autogestão (autorregulação)</td><td>0,201</td></tr>
+              <tr><td>Apego aos pares (amizades)</td><td>0,132</td></tr>
+              <tr><td>Desempenho acadêmico</td><td>0,090</td></tr>
+              <tr><td>Instrução individualizada do professor</td><td>0,067</td></tr>
+              <tr><td>Interação afetiva com os pais</td><td>0,065</td></tr>
+              <tr><td>Estilo parental de apoio à autonomia</td><td>0,061</td></tr>
+              <tr><td>Suporte acadêmico dos pais</td><td>0,058</td></tr>
+              <tr><td>Pressão acadêmica do professor</td><td>0,041</td></tr>
+              <tr><td>Ensino interativo do professor</td><td>0,039</td></tr>
+              <tr><td>Relacionamento geral com o professor</td><td>0,022</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="panel finding">
+        <div class="finding-head"><div class="number">03</div><div><h3>Amizades acolhedoras podem favorecer a expressão criativa</h3><p>O apego aos pares apareceu como o segundo fator de maior impacto relativo no modelo (γ = 0,135; β = 0,132), acima das variáveis de suporte parental e instrução docente listadas.</p></div></div>
+        <p>Esse vínculo foi associado à percepção de respeito nas conversas, escuta ativa, confiança, abertura para compartilhar preocupações e sensação de ser compreendido. Um grupo de amigos acolhedor pode ajudar o adolescente a tolerar a incerteza, assumir riscos intelectuais e apresentar ideias pouco convencionais sem tanto receio do ridículo.</p>
+        <blockquote class="callout">A segurança emocional nas relações entre colegas pode abrir espaço para que ideias originais sejam expressas — e não apenas imaginadas em silêncio.</blockquote>
+      </article>
+
+      <article class="panel finding">
+        <div class="finding-head"><div class="number">04</div><div><h3>Autonomia estimula a exploração; autoritarismo não mostrou efeito significativo</h3><p>O estudo diferenciou o estilo parental de base do suporte cotidiano oferecido ao longo dos anos.</p></div></div>
+        <ul>
+          <li><strong>Apoio à autonomia:</strong> apresentou associação positiva e estatisticamente significativa com o crescimento da criatividade (γ = 0,056; β = 0,061). Respeitar preferências, ouvir os filhos e encorajar escolhas independentes pode oferecer uma base segura para explorar ideias.</li>
+          <li><strong>Estilo autoritário:</strong> não apresentou contribuição estatisticamente significativa no modelo descrito (γ = 0,012; p = 0,059).</li>
+        </ul>
+        <p>O apoio acadêmico cotidiano dos pais (β = 0,058) e a interação afetiva sobre a vida escolar (β = 0,065) também apareceram relacionados à atitude criativa. O texto alerta que envolvimento e orientação não devem se transformar em controle excessivo ou pressão desmedida por resultados.</p>
+      </article>
+
+      <article class="panel finding">
+        <div class="finding-head"><div class="number">05</div><div><h3>O gênero moderou algumas relações com a criatividade autorreportada</h3><p>No modelo final, os meninos apresentaram média de atitude criativa autorreportada superior à das meninas (γ = 0,167; β = 0,102). O estudo, porém, não encontrou diferenças significativas entre os gêneros nas taxas de crescimento linear e quadrática ao longo do tempo.</p></div></div>
+        <p>O efeito positivo da autorregulação foi maior no grupo masculino (γ₃₁ = 0,051; β = 0,031; p &lt; 0,001), assim como o efeito do vínculo com amigos (γ₄₁ = 0,037; β = 0,023; p &lt; 0,001).</p>
+        <p>Para interpretar esses resultados, o texto discute hipóteses ligadas à pressão social e às expectativas de gênero. Entre elas está o perfil “underground”, no qual jovens com alto potencial podem ocultar habilidades para preservar o pertencimento ao grupo. O estudo também considera normas socioculturais do contexto sul-coreano, que podem desencorajar a assertividade feminina.</p>
+        <div class="callout">Esses achados descrevem médias e relações estatísticas de uma amostra específica. Não significam que meninos sejam naturalmente mais criativos, nem permitem generalizar diretamente os resultados para todos os contextos culturais.</div>
+      </article>
+    </section>
+
+    <section class="section" id="midias">
+      <div class="section-head">
+        <div class="eyebrow">Explore em outros formatos</div>
+        <h2>Infográfico, áudio e vídeo</h2>
+        <p>Materiais complementares para revisar os principais pontos da discussão.</p>
+      </div>
+      <div class="media-grid">
+        <article class="panel media-card">
+          <div class="media-icon" aria-hidden="true">▦</div>
+          <h3>Infográfico</h3>
+          <p>Uma síntese visual do desenvolvimento da criatividade em estudantes.</p>
+          <a href="https://raw.githubusercontent.com/terzziani/topico4-criatividade/main/Desenvolvimento_da_Criatividade_em_Estudantes.png" target="_blank" rel="noopener noreferrer">
+            <img src="https://raw.githubusercontent.com/terzziani/topico4-criatividade/main/Desenvolvimento_da_Criatividade_em_Estudantes.png" alt="Infográfico sobre o desenvolvimento da criatividade em estudantes" loading="lazy">
+          </a>
+          <a href="https://raw.githubusercontent.com/terzziani/topico4-criatividade/main/Desenvolvimento_da_Criatividade_em_Estudantes.png" target="_blank" rel="noopener noreferrer">Abrir infográfico em tamanho original ↗</a>
+        </article>
+        <article class="panel media-card">
+          <div class="media-icon" aria-hidden="true">♫</div>
+          <h3>Áudio</h3>
+          <p>Por que alguns alunos escondem sua criatividade?</p>
+          <audio controls preload="metadata">
+            <source src="https://raw.githubusercontent.com/terzziani/topico4-criatividade/main/Por_que_alunos_escondem_sua_criatividade.m4a" type="audio/mp4">
+            Seu navegador não oferece suporte à reprodução de áudio. <a href="https://raw.githubusercontent.com/terzziani/topico4-criatividade/main/Por_que_alunos_escondem_sua_criatividade.m4a">Abrir o áudio</a>.
+          </audio>
+          <a href="https://raw.githubusercontent.com/terzziani/topico4-criatividade/main/Por_que_alunos_escondem_sua_criatividade.m4a" target="_blank" rel="noopener noreferrer">Abrir áudio em nova aba ↗</a>
+        </article>
+        <article class="panel media-card">
+          <div class="media-icon" aria-hidden="true">▶</div>
+          <h3>Vídeo</h3>
+          <p>Como a autorregulação impulsiona a criatividade.</p>
+          <video controls preload="metadata" playsinline>
+            <source src="https://raw.githubusercontent.com/terzziani/topico4-criatividade/main/Como_a_Autorregula%C3%A7%C3%A3o_Impulsiona_a_Criatividade.mp4" type="video/mp4">
+            Seu navegador não oferece suporte à reprodução de vídeo. <a href="https://raw.githubusercontent.com/terzziani/topico4-criatividade/main/Como_a_Autorregula%C3%A7%C3%A3o_Impulsiona_a_Criatividade.mp4">Abrir o vídeo</a>.
+          </video>
+          <a href="https://raw.githubusercontent.com/terzziani/topico4-criatividade/main/Como_a_Autorregula%C3%A7%C3%A3o_Impulsiona_a_Criatividade.mp4" target="_blank" rel="noopener noreferrer">Abrir vídeo em nova aba ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="conclusao">
+      <div class="section-head">
+        <div class="eyebrow">Síntese</div>
+        <h2>A criatividade é uma construção coletiva</h2>
+      </div>
+      <div class="panel conclusion">
+        <p>Os achados apresentados sugerem que a criatividade na adolescência não deve ser entendida como um atributo inato e isolado. Ela se desenvolve na interação entre hábitos de autogestão e uma rede relacional formada por amigos, família e escola.</p>
+        <p>Para educadores e responsáveis, as implicações práticas destacadas são:</p>
+        <ul>
+          <li>Ensinar rotinas de organização pessoal e gestão do tempo;</li>
+          <li>Cultivar espaços de convivência baseados no respeito e na escuta sem julgamentos;</li>
+          <li>Trocar o controle autoritário e a pressão por notas perfeitas por oportunidades reais de autonomia;</li>
+          <li>Oferecer apoio individualizado e segurança para experimentar, errar e revisar ideias.</li>
+        </ul>
+        <p class="reflection">Nas nossas casas e salas de aula, estamos oferecendo estrutura e liberdade para que a originalidade dos adolescentes emerja — ou exigindo conformidade à custa de seu potencial criativo?</p>
+      </div>
+    </section>
+    <a class="back-top" href="#topo">↑ Voltar ao início</a>
+  </main>
+
+  <footer>
+    <p>“Conteúdo gerado por IA sob supervisão de <strong>Nathália</strong>.”</p>
+  </footer>
+</body>
+</html>
